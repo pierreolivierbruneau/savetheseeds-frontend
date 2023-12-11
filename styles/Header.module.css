@@ -1,0 +1,95 @@
+.main{
+    color: #224229;
+    background-color: #E1E8BA;
+   
+}
+
+.mainContainer {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+   text-align: center;
+   padding: 0 20px;
+   overflow: hidden;
+
+}
+
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    border-color: #224229;
+
+}
+
+.seedling{
+align-self: flex-end;
+transform: translateY(5px);
+
+}
+
+.title{
+    padding:20px;
+    font-family: baskervville;
+    font-size: 70px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.buttons{
+display:flex;
+flex-direction:column;
+justify-content: space-between;
+}
+
+.inscription{
+    border: none;
+    color:#224229;
+   background-color: #E1E8BA;
+   display: flex;
+   justify-content: space-around;
+   font-size: 17px;
+   border-radius: 12px;
+   font-family: poppins;
+   
+    }
+
+    .inscription:hover{
+        box-shadow: 0 12px 16px 0 #224229, 0 17px 50px 0 #224229;
+    }
+
+.connection{
+    background-color: #E1E8BA;
+    border: none;
+    color:#224229;
+    display: flex;
+    font-size: 17px;
+    border-radius: 12px;
+    font-family: poppins;
+}
+.connection:hover{
+    box-shadow: 0 12px 13px 0 #224229, 0 17px 30px 0 #224229;
+}
+
+.accueil{
+    display: flex;
+    justify-content: flex-start;
+    background-color: #224229;
+    color: #E1E8BA;
+    border: none;
+    transition-duration: 0.2s;
+    font-size: 20px;
+    padding: 15px;
+    font-family: poppins;
+}
+
+.accueil:hover{
+    background-color: #E1E8BA; 
+    color: #224229;
+    font-family: poppins;
+    text-decoration: underline;
+}
