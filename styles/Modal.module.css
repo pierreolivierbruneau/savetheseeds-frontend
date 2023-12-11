@@ -1,0 +1,78 @@
+.modal{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    font-family: 'Poppins'; 
+    height: 100wh;
+    width: 100vh;
+}
+
+.bttn1{
+    color: #FFFFFF;
+    background-color: #224229;
+    font-family: 'Poppins';
+}
+
+.signInBttn{
+    background-color: #224229;
+    color: #FFFFFF;
+    font-family: 'Poppins';
+    border-radius: 20px;
+    width: 100%;
+    height: 70px;
+    margin-bottom: 20px;
+   }
+
+.signUpBttn{
+    background-color: #E1E8BA;
+    color: #313232;
+    font-family: 'Poppins';
+    border-radius: 20px;
+    width: 100%;
+    height: 70px;
+   }
+
+.input{
+    border-radius: 20px;
+    height: 70px;
+    width: 100%;
+    font-family: 'Poppins';
+    font-size: 20px;
+}
+
+.forgottenPassword{
+    text-decoration: underline;
+    font-family: 'Poppins';
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.remember{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.rememberMe {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 18px;
+    }
+
+.click {
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+     
+}
+
+.text{
+    font-family: 'Poppins';
+    font-size: 20px;
+    margin-bottom: 0;
+}
+

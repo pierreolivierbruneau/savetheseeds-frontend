@@ -8,3 +8,17 @@ body {
 * {
   box-sizing: border-box;
 }
+
+.ant-modal-content {
+  min-width: 600px;
+  min-height: 600px;
+  padding: 40px!important;
+  }
+
+  .ant-modal-title {
+    color: #224229!important;
+    font-size: 40px!important;
+    font-family: 'Poppins'!important;
+    display: flex!important;
+    justify-content: center!important;
+    }
