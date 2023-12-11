@@ -1,4 +1,5 @@
 import styles from '../styles/Header.module.css';
+import Modale from './Modal';
 
 
 function Header(){
@@ -31,7 +32,8 @@ function Header(){
      
         <div className={styles.buttons}>
             <p><button className={styles.inscription}>Inscription</button></p>
-            <button className={styles.connection}>Se Connecter</button>
+            
+            <Modale/>
         </div>
     </div>
         
