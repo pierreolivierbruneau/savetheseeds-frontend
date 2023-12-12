@@ -1,6 +1,7 @@
 import styles from '../styles/Header.module.css';
 import Modale from './Modal';
 
+import Link from 'next/link';
 
 function Header(){
 
@@ -31,7 +32,7 @@ function Header(){
      </div>
      
         <div className={styles.buttons}>
-            
+        {/* <p><button className={styles.inscription}>Inscription</button></p> */}
             <Modale/>
         </div>
     </div>

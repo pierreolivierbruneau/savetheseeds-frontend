@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import styles from '../styles/Modal.module.css';
 import { Modal, Button } from 'antd';
 import { login, logout } from '../reducers/user';
+import Link from 'next/link';
+
 
 function Modale() {
 
@@ -74,7 +76,7 @@ function Modale() {
       </>
       :
 <>
-        <Button className={styles.inscription}>Inscription</Button>
+        <Link href="/inscription" ><span className={styles.inscription}>Inscription</span></Link>
 
       <Button className={styles.bttn1} onClick={() =>openModal()}>
         Connexion
@@ -89,7 +91,7 @@ function Modale() {
         <div>
           <div className={styles.username}>
           <p className={styles.text}>Nom d'utilisateur</p>
-          <input className={styles.input} type ='text' placeholder='Francis Lalane' id='Nom utilisateur'></input>
+          <input className={styles.input} type ='text' placeholder='Francis Lalane' id='Nom utilisateur'onChange={(e) => setSignInUsername(e.target.value)} value={signInUsername} ></input>
           </div>
           <div className={styles.password}>
           <p className={styles.text}>Mot de passe</p>
