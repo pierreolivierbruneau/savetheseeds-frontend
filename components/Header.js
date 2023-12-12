@@ -1,8 +1,6 @@
 import styles from '../styles/Header.module.css';
 import Modale from './Modal';
 
-import Link from 'next/link';
-
 
 function Header(){
 
@@ -23,12 +21,12 @@ function Header(){
      <div>
         <div className={styles.title}>Save the Seeds</div>
         <div className={styles.navbar}> 
-            <Link href="/"><span className={styles.accueil}>Accueil</span></Link>
-            <Link href="/maps"><span className={styles.accueil}>Geolocalisation</span></Link>
+            <button className={styles.accueil}>Accueil</button>
+            <button className={styles.accueil}>Geolocalisation</button>
             <button className={styles.accueil}>Forum</button>
             <button className={styles.accueil}>Images</button>
             <button className={styles.accueil}>Dons</button>
-            <Link href="/about"><span className={styles.accueil}>A Propos</span></Link>
+            <button className={styles.accueil}>A Propos</button>
         </div>
      </div>
      
