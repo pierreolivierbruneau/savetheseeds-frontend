@@ -89,7 +89,7 @@ function Modale() {
         <div>
           <div className={styles.username}>
           <p className={styles.text}>Nom d'utilisateur</p>
-          <input className={styles.input} type ='text' placeholder='Francis Lalane' id='Nom utilisateur' onChange={(e) => setSignInUsername(e.target.value)} value={signInUsername}></input>
+          <input className={styles.input} type ='text' placeholder='Francis Lalane' id='Nom utilisateur'></input>
           </div>
           <div className={styles.password}>
           <p className={styles.text}>Mot de passe</p>
