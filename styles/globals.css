@@ -18,11 +18,14 @@ body {
 }
 
 .ant-modal-content {
-  width: 600px;
+  width: 700px;
+  height: 700px;
 }
 .ant-modal-title {
   text-align: center;
   color: #224229!important;
   font-size: 30px!important;
   font-family: 'Poppins'!important;
+  margin-top: 20px!important;
+  margin-bottom: 40px!important;
 }
