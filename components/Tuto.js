@@ -5,7 +5,7 @@ function Tuto() {
     <div>
       <main className={styles.main}>
         <div className={styles.containerTitle}>
-          <h3 className={styles.title}>Vous Allez Créer Vos Semis</h3>
+          <h3 className={styles.title}>Créer Vos Semis</h3>
         </div>
 
         <div className={styles.containerSousTitle}>
