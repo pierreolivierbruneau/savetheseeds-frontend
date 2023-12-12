@@ -1,8 +1,14 @@
 import styles from "../styles/Home.module.css";
 import Header from "./Header";
 import { useState } from "react";
+
+
 function Home() {
+
+
   const [lookingForSeeds, setLookingForSeeds] = useState("");
+
+
   return (
     <div>
       <Header />
