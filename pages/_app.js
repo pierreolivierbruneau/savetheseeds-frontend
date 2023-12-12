@@ -30,6 +30,7 @@ function App({ Component, pageProps }) {
       <Head>
         <title>save the seeds</title>
       </Head>
+      <Header />
       <Component {...pageProps} />
     </PersistGate>
     </Provider>
