@@ -16,3 +16,13 @@ body {
 * {
   box-sizing: border-box;
 }
+
+.ant-modal-content {
+  width: 600px;
+}
+.ant-modal-title {
+  text-align: center;
+  color: #224229!important;
+  font-size: 30px!important;
+  font-family: 'Poppins'!important;
+}
