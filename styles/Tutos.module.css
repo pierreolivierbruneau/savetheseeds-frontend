@@ -1,14 +1,49 @@
 .title {
-  color: #e1e8ba;
-
+  color: #224229;
+  font-family: "Libre Baskerville", serif;
   text-align: center;
-  font-family: Poppins;
-  font-size: 36px;
+  font-size: 60px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   line-height: normal;
-  width: 899px;
-  height: 115px;
-  flex-shrink: 0;
-  background: #224229;
+  margin-top: 100px;
+  height: 60px;
+  margin: 20px auto;
+  justify-content: center;
+}
+
+.containerTitle {
+  margin-top: 100px;
+  padding: 30px;
+  border: 1px solid #ccc;
+}
+.sousTitle {
+  margin-top: 0;
+  color: #224229;
+  font-family: "Poppins";
+  background-color: rgba(225, 232, 186, 0.95);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: inline-block;
+}
+
+.containerSousTitle {
+}
+.imageStyle {
+  height: 250px;
+}
+
+.section {
+  display: flex;
+  margin: 40px auto;
+  max-width: 1000px;
+  margin-top: 40px;
+}
+
+.textSection {
+  text-align: left;
+}
+.paragraph {
 }

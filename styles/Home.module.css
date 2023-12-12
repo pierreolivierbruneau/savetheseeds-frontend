@@ -44,9 +44,11 @@
 }
 
 .button2 {
-  background-color: #224229;
   color: #e1e8ba;
-  font-family: "Poppins", sans-serif;
+  background-color: #224229;
+
+  font-family: "Libre Baskerville", sans-serif;
+
   font-size: 16px;
   text-align: center;
   font-weight: 400px;
