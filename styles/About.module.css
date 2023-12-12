@@ -1,0 +1,78 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100wh;
+    height: 100vh;
+}
+
+.title{
+    text-align: center;
+    color: #224229;
+    font-family: 'Libre Baskerville';
+    font-size: 80px;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    font-family: 'Baskerville';
+    font-size: 40px;    
+    background-color: #E1E8BA;
+    width: 888px;
+    height: 600px;
+    
+        
+}
+
+.questions {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.answers{
+    background-color: #E1E8BA;
+}
+
+.socialNetworks{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;   
+    width: 48%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+.facebook{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #FFFFFF;
+    background-color: #224229;
+    width: auto;
+    cursor: pointer;
+   
+}
+
+.instagram{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #ffffff;
+    background-color: #224229;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.icons{
+    display: flex;
+    margin-right: 20px;
+    margin-left: 20px;
+}
