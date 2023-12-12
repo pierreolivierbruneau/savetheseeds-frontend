@@ -1,7 +1,8 @@
 import styles from "../styles/Home.module.css";
 import Header from "./Header";
-
+import { useState } from "react";
 function Home() {
+  const [lookingForSeeds, setLookingForSeeds] = useState("");
   return (
     <div>
       <Header />
@@ -11,7 +12,14 @@ function Home() {
         {/* <img src="/image.webp" className={styles.image} /> */}
         <h1 className={styles.title}></h1>
         <div className={styles.buttonCountainer1}>
-          <div className={styles.button1}>Recherche de Type de Graines</div>
+          <div>
+            <input
+              className={styles.inputStyle}
+              onChange={(e) => setLookingForSeeds(e.target.value)}
+              value={lookingForSeeds}
+              placeholder="Recherche de Type de Graines"
+            />
+          </div>
           <div className={styles.button2}>
             Quelles Graines Planter à proximité
           </div>
