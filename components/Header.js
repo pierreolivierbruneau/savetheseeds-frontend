@@ -1,6 +1,6 @@
 import styles from '../styles/Header.module.css';
 import Modale from './Modal';
-
+import Link from 'next/link';
 
 function Header(){
 
@@ -22,17 +22,19 @@ function Header(){
         <div className={styles.title}>Save the Seeds</div>
         <div className={styles.navbar}> 
             <button className={styles.accueil}>Accueil</button>
-            <button className={styles.accueil}>Geolocalisation</button>
+            <button className={styles.accueil}>Géolocalisation</button>
             <button className={styles.accueil}>Forum</button>
             <button className={styles.accueil}>Images</button>
             <button className={styles.accueil}>Dons</button>
+            <button className={styles.accueil}>Tutos</button>
             <button className={styles.accueil}>A Propos</button>
         </div>
      </div>
      
         <div className={styles.buttons}>
-            <p><button className={styles.inscription}>Inscription</button></p>
-            
+            <Link href="/inscription">
+                <button className={styles.inscription}>Inscription</button>
+            </Link>
             <Modale/>
         </div>
     </div>
