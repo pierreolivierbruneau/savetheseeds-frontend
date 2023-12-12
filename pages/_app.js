@@ -1,5 +1,6 @@
-import '../styles/globals.css';
-import Head from 'next/head';
+import "../styles/globals.css";
+import Head from "next/head";
+import Header from "../components/Header";
 
 // redux-persist imports
 import { persistStore, persistReducer } from 'redux-persist';
@@ -29,6 +30,7 @@ function App({ Component, pageProps }) {
       <Head>
         <title>save the seeds</title>
       </Head>
+      <Header />
       <Component {...pageProps} />
     </PersistGate>
     </Provider>

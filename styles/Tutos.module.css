@@ -1,0 +1,14 @@
+.title {
+  color: #e1e8ba;
+
+  text-align: center;
+  font-family: Poppins;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  width: 899px;
+  height: 115px;
+  flex-shrink: 0;
+  background: #224229;
+}
