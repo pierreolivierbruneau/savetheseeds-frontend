@@ -48,12 +48,39 @@ function Modale() {
     })
   }
 
+  const handleLogout = () => {
+    dispatch(logout());
+
+  }
+    let userSection;
+    if (user.token) {
+    userSection = (
+      <div>
+        <p>Welcome {user.username} / </p>
+        <Button className={styles.bttn1} onClick={() => handleLogout()}>
+        Deconnexion  
+      </Button>
+      </div>
+    )}
+    console.log(user)
+    
 
   return (
     <div>
+      {user.token ? 
+      <>
+      
+        {userSection}
+      </>
+      :
+<>
+        <Button className={styles.inscription}>Inscription</Button>
+
       <Button className={styles.bttn1} onClick={() =>openModal()}>
-        Connection
+        Connexion
       </Button>
+      </>  }
+     
       <Modal className={styles.modal} 
         title="Se connecter"
         open={isOpen}
