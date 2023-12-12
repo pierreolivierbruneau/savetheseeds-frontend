@@ -1,8 +1,10 @@
 import styles from "../styles/Home.module.css";
 import { useState } from "react";
-
+import { useSelector, useDispatch } from "react-redux";
+import { logout } from "../reducers/user";
 
 function Home() {
+
 
 
   const [lookingForSeeds, setLookingForSeeds] = useState("");
