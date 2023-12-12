@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import styles from '../styles/Modal.module.css';
 import { Modal, Button } from 'antd';
-
+import { login, logout } from '../reducers/user';
 
 function Modale() {
 
