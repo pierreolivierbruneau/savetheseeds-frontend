@@ -17,6 +17,7 @@
     "react-modal": "^3.16.1",
     "react-redux": "^9.0.4",
     "redux-persist": "^6.0.0"
+
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.4",
