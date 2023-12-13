@@ -6,7 +6,7 @@ function Tuto() {
       <main className={styles.main}>
         <div className={styles.containerTitle}>
           <h3 className={styles.title}>Créer Vos Semis</h3>
-        </div>
+        </div>y
 
         <div className={styles.containerSousTitle}>
           <div className={styles.section}>
