@@ -25,7 +25,8 @@ function Header(){
             <Link href="/"><span className={styles.accueil}>Accueil</span></Link>
             <Link href="/maps"><span className={styles.accueil}>Geolocalisation</span></Link>
             <button className={styles.accueil}>Forum</button>
-            <button className={styles.accueil}>Images</button>
+            <button className={styles.accueil}>Galeries photos</button>
+            <Link href="/tutos"><span className={styles.accueil}>Tutos</span></Link>
             <button className={styles.accueil}>Dons</button>
             <Link href="/about"><span className={styles.accueil}>About US</span></Link>
         </div>
