@@ -15,7 +15,6 @@
 .containerTitle {
   margin-top: 100px;
   padding: 30px;
-  border: 1px solid #ccc;
 }
 .sousTitle {
   margin-top: 0;
@@ -43,5 +42,11 @@
 .textSection {
   text-align: left;
 }
-.paragraph {
+
+.materiel {
+  font-weight: bold;
+}
+
+.list {
+  font-style: italic;
 }
