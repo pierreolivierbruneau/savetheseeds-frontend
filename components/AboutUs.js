@@ -13,27 +13,40 @@ function AboutUs() {
     const handleClick = () => {
       console.log('Click')
       setShowWho(!showWho)
+      setShowWhy(false)
+      setShowHow(false)
+      setShowPurpose(false)
     }
 
     const handleClick2= () => {
       console.log('Click')
       setShowWhy(!showWhy)
+      setShowWho(false)
+      setShowHow(false)
+      setShowPurpose(false)
     }
 
     const handleClick3= () => {
       console.log('Click')
       setShowHow(!showHow)
+      setShowWhy(false)
+      setShowWho(false)
+      setShowPurpose(false)
     }
 
     const handleClick4= () => {
       console.log('Click')
       setShowPurpose(!showPurpose)
+      setShowWhy(false)
+      setShowHow(false)
+      setShowWho(false)
     }
 
 
   return (
-    <div>
+    <div className={styles.container}>
       <main className={styles.main}>
+        
         <h2 className={styles.title}>A PROPOS</h2>
         <div className={styles.about}>
           <h3 className={styles.questions} onClick={handleClick}>Qui ?</h3>
@@ -43,7 +56,7 @@ function AboutUs() {
           <h3 className={styles.questions} onClick={handleClick3}>Comment ?</h3>
           {showHow && <p className={styles.answers}>Replanter des arbres à partir de graines et noyaux que l'on trouve dans notre alimentation.</p>}
           <h3 className={styles.questions} onClick={handleClick4}>Notre but ?</h3>
-          {showPurpose && <p className={styles.answers}>Améliorer la biodiversité de notre environnement et diminuer notre impact écologique</p>}
+          {showPurpose && <p className={styles.answers}>Améliorer la biodiversité de notre environnement et ainsi diminuer notre impact écologique.</p>}
         </div>
         <div className={styles.socialNetworks}>
           <div className={styles.facebook}>
@@ -54,8 +67,8 @@ function AboutUs() {
           <FontAwesomeIcon  icon={faInstagram} className={styles.icons}/>
           <p>Instagram</p>
           </div>
-        </div>
-      </main>
+        </div>      
+      </main>     
     </div>
   );
 }
