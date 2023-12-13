@@ -57,7 +57,7 @@
     }
 
     .inscription:hover{
-        box-shadow: 0 12px 16px 0 #224229, 0 17px 50px 0 #224229;
+      box-shadow: 0 12px 13px 0 #224229, 0 17px 30px 0 #224229;
     }
 
 .connection{

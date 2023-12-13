@@ -1,0 +1,42 @@
+.title{
+    color: #224229;
+    padding:20px;
+    margin-top: 24px;
+    margin-bottom: 0;
+    font-family: baskervville;
+    font-size: 50px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+}
+
+.image{
+    max-width: 1300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 30px;
+    gap: 60px;
+    color: #224229;
+    text-align: center;
+    font-weight: 500;
+    overflow: auto;
+}
+
+.fruits{
+    color: #224229;
+    font-weight: 700;
+    margin-left: 30px;
+    font-size:x-large;
+    margin-bottom: 5px;
+}
+
+.fruitContainer{
+    margin: auto;
+}
+
+.fruitContainer2{
+   
+    margin-top: 80px;
+    
+}
