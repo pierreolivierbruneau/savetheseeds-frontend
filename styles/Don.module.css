@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.title{
+    text-align: center;
+    color: #224229;
+    font-family: 'Libre Baskerville';
+    font-size: 80px;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.questions {
+    background-color: #E1E8BA;
+    text-align: start;
+    width: 1000px;
+    white-space: wrap;
+    font-size: 40;
+    font-family: 'Poppins';
+    color: #224229;
+}
+
+.blankspace{
+    height:20px;
+}
+
+.input{
+    background-color: #E1E8BA;
+    border-radius: 15px;
+    text-align: center;
+    height: 30px;
+    font-size: 30px;
+}
+
+.button{
+    background-color: #E1E8BA;
+    border-radius: 12px;
+    height: 60px;
+    font-size: 30px;
+    color: #224229;
+    
+}
