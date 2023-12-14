@@ -1,97 +1,94 @@
-.main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100wh;
-
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100wh;
 }
 
-.title{
-    text-align: center;
-    color: #224229;
-    font-family: 'Libre Baskerville';
-    font-size: 80px;
-    font-weight: bold;
-    margin-top: 40px;
-    margin-bottom: 40px;
+.title {
+  text-align: center;
+  color: #224229;
+  font-family: "Libre Baskerville";
+  font-size: 80px;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
-.about{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-    font-family: 'Baskerville';
-    font-size: 40px;    
-    background-color: #E1E8BA;
-    width: 888px;
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  font-family: "Baskerville";
+  font-size: 40px;
+  background-color: #e1e8ba;
+  width: 888px;
 }
 
 .questions {
-    text-decoration: underline;
-    cursor: pointer;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 @keyframes slideIn {
-    from {
-        max-height: 0;
-    }
-    to {
-        max-height: 500px;
-    }
-  }
-
-.answers{
-    /* background-color: #E1E8BA; */
-    overflow: hidden;
-    animation-name: slideIn;
+  from {
     max-height: 0;
+  }
+  to {
+    max-height: 500px;
+  }
+}
+
+.answers {
+  /* background-color: #E1E8BA; */
+  overflow: hidden;
+  animation-name: slideIn;
+  max-height: 0;
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
 
-.socialNetworks{
-    display: flex;        
-    justify-content: space-between;   
-    width: 80%;
-    font-size: 34px;
-    margin: 80px 0;
+.socialNetworks {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  font-size: 34px;
+  margin: 80px 0;
 }
 
-.facebook{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    color: #FFFFFF;
-    background-color: #224229;
-    width: 270px;
-    height: 80px;
-    cursor: pointer;
-     
+.facebook {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #ffffff;
+  background-color: #224229;
+  width: 270px;
+  height: 80px;
+  cursor: pointer;
 }
 
-.instagram{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    color: #ffffff;
-    background-color: #224229;
-    width: 270px;
-    height: 80px;
-    cursor: pointer;  
-  
+.instagram {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #ffffff;
+  background-color: #224229;
+  width: 270px;
+  height: 80px;
+  cursor: pointer;
 }
 
-.icons{
-    display: flex;
-    margin-right: 20px;
-    margin-left: 20px;
+.icons {
+  display: flex;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
-.footer{
-    display: flex;    
-    align-items: center;
-    justify-content: center;
-    background-color: blue;
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: blue;
 }
