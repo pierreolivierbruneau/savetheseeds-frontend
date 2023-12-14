@@ -49,14 +49,25 @@ function AboutUs() {
         
         <h2 className={styles.title}>A PROPOS</h2>
         <div className={styles.about}>
+          <div className={styles.paragraphs}>
           <h3 className={styles.questions} onClick={handleClick}>Qui ?</h3>
           {showWho && <p className={styles.answers}>Nous sommes une petite équipe de développeurs soucieux de l'environnement.</p>}
+          </div>
+          <div className={styles.blankspace}></div>
+          <div className={styles.paragraphs}>
           <h3 className={styles.questions} onClick={handleClick2}>Pourquoi ?</h3>
           {showWhy && <p className={styles.answers}>Nous voulons rendre le monde meilleur en diminuant notre impact sur l'environnement.</p>}
+          </div>
+          <div className={styles.blankspace}></div>
+          <div className={styles.paragraphs}> 
           <h3 className={styles.questions} onClick={handleClick3}>Comment ?</h3>
           {showHow && <p className={styles.answers}>Replanter des arbres à partir de graines et noyaux que l'on trouve dans notre alimentation.</p>}
+          </div>
+          <div className={styles.blankspace}></div>
+          <div className={styles.paragraphs}>
           <h3 className={styles.questions} onClick={handleClick4}>Notre but ?</h3>
           {showPurpose && <p className={styles.answers}>Améliorer la biodiversité de notre environnement et ainsi diminuer notre impact écologique.</p>}
+          </div>
         </div>
         <div className={styles.socialNetworks}>
           <div className={styles.facebook}>

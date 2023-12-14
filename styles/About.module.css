@@ -22,15 +22,19 @@
     align-items: center;
     justify-content: space-between;
     text-align: center;
-    font-family: 'Baskerville';
-    font-size: 40px;    
-    background-color: #E1E8BA;
+    font-family: 'Baskerville';  
     width: 888px;
 }
 
-.questions {
-    text-decoration: underline;
-    cursor: pointer;
+.blankspace{
+    height:20px;
+}
+
+.paragraphs {
+    background-color: #E1E8BA;
+    width: 1000px;
+    border-radius: 10px;
+
 }
 
 @keyframes slideIn {
@@ -42,8 +46,15 @@
     }
   }
 
+  .questions{
+    color: #224229;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 40px;
+  }
+
 .answers{
-    /* background-color: #E1E8BA; */
+    font-size: 32px;
     overflow: hidden;
     animation-name: slideIn;
     max-height: 0;
@@ -67,7 +78,8 @@
     background-color: #224229;
     width: 270px;
     height: 80px;
-    cursor: pointer;
+    border-radius: 10px;
+    cursor: pointer;   
      
 }
 
@@ -79,6 +91,7 @@
     background-color: #224229;
     width: 270px;
     height: 80px;
+    border-radius: 10px;
     cursor: pointer;  
   
 }
