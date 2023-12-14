@@ -18,10 +18,12 @@ function Modale() {
   const [selectedOption, setSelectedOption] = useState(false);
 
  
-//Fonctions ouverture/fermeture Modale
+  //Fonction cochage/décochage 
   const handleClick= () => {
     setSelectedOption(!selectedOption);
   };
+
+//Fonctions ouverture/fermeture Modale
 
   const openModal = () => {
     setIsOpen(true);

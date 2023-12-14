@@ -1,0 +1,79 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    text-align: center;
+    color: #224229;
+    font-family: 'Libre Baskerville';
+    font-size: 80px;
+}
+
+.selectCard {
+    display: flex;
+    flex-direction: row;
+    margin-right: 215px;
+    
+}
+
+.creditCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.numberCard{
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;;
+    width: 350px;
+    margin-bottom: 10px;
+}
+
+.informationsCard {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 14px;
+   
+}
+
+.expirationDate {
+    display: flex;
+    flex-direction: column;
+    width: 125px;
+    margin-right: 50px;
+}
+
+.CVCNumber {
+    display: flex;
+    flex-direction: column;
+    width: 125px;
+    margin-left: 50px;
+}
+
+.payment {
+    background-color: #224229;
+    color: #E1E8BA;
+    width: 200px;
+    height: 32px;
+    margin-top: 20px;
+}
+
+.paypal {
+    background-color: #2B27E7;
+    color: #E1E8BA;
+    width: 200px;
+    height: 32px;
+    margin-top: 20px;
+}
+
+.signUp {
+    background-color: #E1E8BA;
+    color: #224229;
+    width: 400px;
+    height: 60px;
+    margin-top: 20px;
+}
