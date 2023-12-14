@@ -1,7 +1,6 @@
 import styles from "../styles/Inscription.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import { set } from "mongoose";
 import { login, logout } from "../reducers/user";
 
 function Inscription() {
