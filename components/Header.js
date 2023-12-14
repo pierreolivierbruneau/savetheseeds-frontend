@@ -24,7 +24,7 @@ function Header(){
         <div className={styles.navbar}> 
             <Link href="/"><span className={styles.accueil}>Accueil</span></Link>
             <Link href="/maps"><span className={styles.accueil}>Geolocalisation</span></Link>
-            <button className={styles.accueil}>Forum</button>
+            <Link href="/forum"><span className={styles.accueil}>Forum</span></Link>
             <Link href="/galerie"><span className={styles.accueil}>Galerie Photos</span></Link>
             <Link href="/tutos"><span className={styles.accueil}>Tutos</span></Link>
             <button className={styles.accueil}>Dons</button>
