@@ -8,10 +8,16 @@
   color: #000;
 
   font-family: Poppins;
-  font-size: 16px;
+  font-size: 17px;
   font-style: normal;
   font-weight: 400;
-}
-.icon {
-  height: 40px;
+
+  .icon {
+    font-size: 56px;
+    width: 02%;
+    position: absolute;
+    z-index: -1;
+    float: right;
+    margin-left: 500px;
+  }
 }
