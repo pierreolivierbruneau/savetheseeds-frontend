@@ -60,3 +60,16 @@
     margin-top: 10px;;
 }
 
+.commentContainer{
+    width: 95%;
+  height: 90px;
+   margin-left: 30px;
+   margin-top: 50px;
+   border-radius: 17px;
+   background-color: #E1E8BA;
+   border: none;
+    display:flex;
+    word-break: break-all;
+    max-width: 500px;
+}
+
