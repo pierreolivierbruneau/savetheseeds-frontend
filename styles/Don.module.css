@@ -16,12 +16,32 @@
 
 .questions {
     background-color: #E1E8BA;
+    border-radius: 10px;
     text-align: start;
     width: 1000px;
     white-space: wrap;
     font-size: 40;
     font-family: 'Poppins';
     color: #224229;
+    cursor: pointer;
+}
+
+@keyframes slideIn {
+    from {
+        max-height: 0;
+    }
+    to {
+        max-height: 500px;
+    }
+  }
+
+  .answers{
+    /* background-color: #E1E8BA; */
+    overflow: hidden;
+    animation-name: slideIn;
+    max-height: 0;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
 .blankspace{
@@ -33,6 +53,7 @@
     border-radius: 15px;
     text-align: center;
     height: 30px;
+    width: 200px;
     font-size: 30px;
 }
 
@@ -41,6 +62,7 @@
     border-radius: 12px;
     height: 60px;
     font-size: 30px;
+    font-family: 'Poppins';
     color: #224229;
     
 }

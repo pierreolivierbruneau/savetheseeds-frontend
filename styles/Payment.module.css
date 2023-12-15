@@ -73,7 +73,31 @@
 .signUp {
     background-color: #E1E8BA;
     color: #224229;
-    width: 400px;
+    width: 300px;
     height: 60px;
     margin-top: 20px;
+    font-size: 20px;
+}
+
+.modal {
+    display: flex;
+    text-align: center;    
+}
+
+.ant-modal-content {
+    height: 200px;
+}
+
+.thanks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #224229;
+    font-size: 50px;
+}
+
+.heart{
+    color:#224229;
+   
 }

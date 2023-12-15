@@ -1,19 +1,18 @@
-.main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100wh;
-
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100wh;
 }
 
-.title{
-    text-align: center;
-    color: #224229;
-    font-family: 'Libre Baskerville';
-    font-size: 80px;
-    font-weight: bold;
-    margin-top: 40px;
-    margin-bottom: 40px;
+.title {
+  text-align: center;
+  color: #224229;
+  font-family: "Libre Baskerville";
+  font-size: 80px;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .about{
@@ -23,9 +22,24 @@
     justify-content: space-between;
     text-align: center;
     font-family: 'Baskerville';
-    font-size: 40px;    
-    background-color: #E1E8BA;
     width: 888px;
+}
+
+.paragraphs {    
+    background-color: #E1E8BA;
+    color: #224229;
+    font-size: 40px;   
+    width: 1000px;
+    border-radius: 10px;
+}
+
+@keyframes slideIn {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 500px;
+  }
 }
 
 .questions {
@@ -33,30 +47,25 @@
     cursor: pointer;
 }
 
-@keyframes slideIn {
-    from {
-        max-height: 0;
-    }
-    to {
-        max-height: 500px;
-    }
-  }
-
 .answers{
-    /* background-color: #E1E8BA; */
-    overflow: hidden;
+   overflow: hidden;
     animation-name: slideIn;
     max-height: 0;
   animation-duration: 1s;
   animation-fill-mode: forwards;
+  font-size: 32px;   
 }
 
-.socialNetworks{
-    display: flex;        
-    justify-content: space-between;   
-    width: 80%;
-    font-size: 34px;
-    margin: 80px 0;
+.blankspace{
+    height: 20px;
+}
+
+.socialNetworks {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  font-size: 34px;
+  margin: 80px 0;
 }
 
 .facebook{
@@ -68,7 +77,7 @@
     width: 270px;
     height: 80px;
     cursor: pointer;
-     
+    border-radius: 10px;
 }
 
 .instagram{
@@ -80,18 +89,18 @@
     width: 270px;
     height: 80px;
     cursor: pointer;  
-  
+    border-radius: 10px;
 }
 
-.icons{
-    display: flex;
-    margin-right: 20px;
-    margin-left: 20px;
+.icons {
+  display: flex;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
-.footer{
-    display: flex;    
-    align-items: center;
-    justify-content: center;
-    background-color: blue;
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: blue;
 }

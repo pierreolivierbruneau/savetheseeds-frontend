@@ -1,59 +1,148 @@
 import styles from "../styles/Inscription.module.css";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useState } from "react";
+import { login, logout } from "../reducers/user";
 
 function Inscription() {
+  const [signUpUsername, setSignUpUsername] = useState("");
+  const [signUpPassword, setSignUpPassword] = useState("");
+  const [signUpPasswordCheck, setSignUpPasswordCheck] = useState("");
+  const [signUpFirstname, setSignUpFirstname] = useState("");
+  const [signUpLastname, setSignUpLastname] = useState("");
+  const [signUpEmail, setSignUpEmail] = useState("");
+  const [signUpBirthday, setSignUpBirthday] = useState("");
+  const [signUpPhone, setSignUpPhone] = useState("");
+  const dispatch = useDispatch();
+
+  const handleRegister = () => {
+    fetch("http://localhost:3000/users/signup", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        username: signUpUsername,
+        password: signUpPassword,
+        passwordCheck: signUpPasswordCheck,
+        firstname: signUpFirstname,
+        lastname: signUpLastname,
+        email: signUpEmail,
+        birthday: signUpBirthday,
+        phone: signUpPhone,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        if (data.result) {
+          console.log(data);
+          dispatch(login({ username: signUpUsername, token: data.token }));
+
+          setSignUpUsername("");
+          setSignUpPassword("");
+          setSignUpBirthday("");
+          setSignUpEmail("");
+          setSignUpFirstname("");
+          setSignUpLastname("");
+          setSignUpPasswordCheck("");
+          setSignUpPhone("");
+        }
+      });
+  };
+
   return (
     <div>
       <h1 className={styles.title}>CRÉER UN COMPTE</h1>
 
       <div className={styles.container}>
         <div className={styles.fullContainer}>
-            <label for="username">Nom d'utilisateur</label>
-            <input className={styles.input} id="username" type="text" />
+          <label for="username">Nom d'utilisateur</label>
+          <input
+            className={styles.input}
+            id="username"
+            onChange={(e) => setSignUpUsername(e.target.value)}
+            value={signUpUsername}
+            type="text"
+          />
         </div>
 
         <div className={styles.halfContainer}>
           <div>
             <label for="firstname">Prénom</label>
-            <input className={styles.input} id="firstname" type="text" />
+            <input
+              className={styles.input}
+              id="firstname"
+              onChange={(e) => setSignUpFirstname(e.target.value)}
+              value={signUpFirstname}
+              type="text"
+            />
           </div>
           <div>
             <label for="lastname">Nom</label>
-            <input className={styles.input} id="lastname" type="text" />
+            <input
+              className={styles.input}
+              id="lastname"
+              onChange={(e) => setSignUpLastname(e.target.value)}
+              value={signUpLastname}
+              type="text"
+            />
           </div>
         </div>
-
-
 
         <div className={styles.halfContainer}>
           <div>
             <label for="birthday">Date de naissance</label>
-            <input className={styles.input} id="birthday" type="date" />
+            <input
+              className={styles.input}
+              id="birthday"
+              onChange={(e) => setSignUpBirthday(e.target.value)}
+              value={signUpBirthday}
+              type="date"
+            />
           </div>
           <div>
             <label for="phone">Téléphone</label>
-            <input className={styles.input} id="phone" type="number" />
+            <input
+              className={styles.input}
+              id="phone"
+              onChange={(e) => setSignUpPhone(e.target.value)}
+              value={signUpPhone}
+              type="number"
+            />
           </div>
         </div>
 
-       
         <div className={styles.fullContainer}>
-            <label for="email">E-mail</label>
-            <input className={styles.input} id="email" type="email" />
+          <label for="email">E-mail</label>
+          <input
+            className={styles.input}
+            id="email"
+            onChange={(e) => setSignUpEmail(e.target.value)}
+            value={signUpEmail}
+            type="email"
+          />
         </div>
-
 
         <div className={styles.halfContainer}>
           <div>
             <label for="password">Password</label>
-            <input className={styles.input} id="password" type="password" />
+            <input
+              className={styles.input}
+              id="password"
+              onChange={(e) => setSignUpPassword(e.target.value)}
+              value={signUpPassword}
+              type="password"
+            />
           </div>
           <div>
             <label for="passwordcheck">Confirmation du password</label>
-            <input className={styles.input} id="passwordcheck" type="password" />
+            <input
+              className={styles.input}
+              id="passwordcheck"
+              onChange={(e) => setSignUpPasswordCheck(e.target.value)}
+              value={signUpPasswordCheck}
+              type="password"
+            />
           </div>
         </div>
-      
-     
 
         <div>
           <button className={styles.photo}>
@@ -70,7 +159,9 @@ function Inscription() {
           </button>
         </div>
         <div>
-          <button className={styles.creer}>Créer son compte</button>
+          <button className={styles.creer} onClick={() => handleRegister()}>
+            Créer son compte
+          </button>
         </div>
       </div>
 
