@@ -41,7 +41,9 @@ function Header() {
             <Link href="/tutos">
               <span className={styles.accueil}>Tutos</span>
             </Link>
+            <Link href='/dons'>
             <button className={styles.accueil}>Dons</button>
+            </Link>
             <Link href="/about">
               <span className={styles.accueil}>A propos</span>
             </Link>

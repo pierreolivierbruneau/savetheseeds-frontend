@@ -17,6 +17,7 @@ function Inscription() {
   const [signUpPhone, setSignUpPhone] = useState("");
   const dispatch = useDispatch();
 
+  //Pour être redirigé sur la page d'accueil
   const router = useRouter();
 
   const handleRegister = () => {
@@ -48,6 +49,7 @@ function Inscription() {
           setSignUpLastname("");
           setSignUpPasswordCheck("");
           setSignUpPhone(""); 
+          //Redirection vers la page d'accueil
           router.push('/');
       
         }

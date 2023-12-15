@@ -53,7 +53,9 @@ function Payment() {
         <FontAwesomeIcon icon={faHeart} />
         </div>
         </Modal>
+        <Link href='https://www.paypal.com/signin'>
         <Button className={styles.paypal}>Paypal</Button>
+        </Link>
         <Link href='/inscription'>
         <Button className={styles.signUp}>Inscription</Button>
         </Link>
