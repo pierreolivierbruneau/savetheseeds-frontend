@@ -1,10 +1,12 @@
 import styles from "../styles/Inscription.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
+import { useRouter } from 'next/router';
 import { login, logout } from "../reducers/user";
 import Link from 'next/link';
 
 function Inscription() {
+  
   const [signUpUsername, setSignUpUsername] = useState("");
   const [signUpPassword, setSignUpPassword] = useState("");
   const [signUpPasswordCheck, setSignUpPasswordCheck] = useState("");
@@ -14,6 +16,8 @@ function Inscription() {
   const [signUpBirthday, setSignUpBirthday] = useState("");
   const [signUpPhone, setSignUpPhone] = useState("");
   const dispatch = useDispatch();
+
+  const router = useRouter();
 
   const handleRegister = () => {
     fetch("http://localhost:3000/users/signup", {
@@ -43,9 +47,19 @@ function Inscription() {
           setSignUpFirstname("");
           setSignUpLastname("");
           setSignUpPasswordCheck("");
-          setSignUpPhone("");
+          setSignUpPhone(""); 
+          router.push('/');
+      
         }
       });
+  };
+
+  const loader = async () => {
+    const user = await getUser();
+    if (user) {
+      return redirect("/");
+    }
+    return null;
   };
 
   return (
@@ -158,12 +172,11 @@ function Inscription() {
             </svg>
           </button>
         </div>
-        <div>
-          <Link href='/'>
-          <button className={styles.creer} onClick={() => handleRegister()}>
-            Créer son compte
-          </button>
-          </Link>
+        <div>          
+            <button className={styles.creer} onClick={() => handleRegister()}>
+              Créer son compte
+            </button>                
+                  
         </div>
       </div>
 
