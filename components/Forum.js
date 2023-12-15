@@ -28,8 +28,8 @@ function Forum() {
   });
 
   return (
-    <div>
-      <div className={styles.back}>
+    <div className={styles.back}>
+      <div className={styles.full}>
         <div className={styles.topContainer}>
           <div className={styles.title}>Forum</div>
 

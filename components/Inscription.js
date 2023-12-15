@@ -1,12 +1,11 @@
 import styles from "../styles/Inscription.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 import { login, logout } from "../reducers/user";
-import Link from 'next/link';
+import Link from "next/link";
 
 function Inscription() {
-  
   const [signUpUsername, setSignUpUsername] = useState("");
   const [signUpPassword, setSignUpPassword] = useState("");
   const [signUpPasswordCheck, setSignUpPasswordCheck] = useState("");
@@ -48,10 +47,9 @@ function Inscription() {
           setSignUpFirstname("");
           setSignUpLastname("");
           setSignUpPasswordCheck("");
-          setSignUpPhone(""); 
+          setSignUpPhone("");
           //Redirection vers la page d'accueil
-          router.push('/');
-      
+          router.push("/");
         }
       });
   };
@@ -174,11 +172,10 @@ function Inscription() {
             </svg>
           </button>
         </div>
-        <div>          
-            <button className={styles.creer} onClick={() => handleRegister()}>
-              Créer son compte
-            </button>                
-                  
+        <div>
+          <button className={styles.creer} onClick={() => handleRegister()}>
+            Créer son compte
+          </button>
         </div>
       </div>
 
