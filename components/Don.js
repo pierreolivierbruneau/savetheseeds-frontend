@@ -58,6 +58,10 @@ function Don() {
           <div>
             <Link href='/payments'><Button className={styles.button}>Valider mon don</Button></Link>
           </div>
+          <div className={styles.blankspace}></div>
+          <div>
+            <img src='hands.jpg' style={{ width: '300px', height: '200px' }}/>
+          </div>
       </div>
     );
    }
