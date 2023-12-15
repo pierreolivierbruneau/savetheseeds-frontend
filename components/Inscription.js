@@ -146,7 +146,7 @@ function Inscription() {
 
         <div>
           <button className={styles.photo}>
-            <input type="file" accept="image/png, image/jpeg" />
+            Ajouter une photo
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className={styles.clip}

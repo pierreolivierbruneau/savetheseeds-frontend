@@ -17,9 +17,12 @@ function Forum() {
   const allMessages = message.map((data, i) => {
     return (
       <div className={styles.msgb}>
-        {data.title}
-        {data.text}
-        {data.username}
+        <span>Subject: </span>
+        <span>{data.title} </span>
+        <span> Content: </span>
+        <span>{data.text} </span>
+        <span> Name: </span>
+        <span>{data.username} </span>
       </div>
     );
   });
@@ -41,8 +44,6 @@ function Forum() {
             </Link>
           </div>
 
-          {allMessages}
-
           <div className={styles.categories}>
             <div>Sujets</div>
 
@@ -52,7 +53,7 @@ function Forum() {
           </div>
 
           <div className={styles.bottom}>
-            <div>Pourquoi mes graines ne poussent pas ?</div>
+            <div>{allMessages}</div>
             <div>12/13/2023</div>
             <div>150 Messages</div>
           </div>
