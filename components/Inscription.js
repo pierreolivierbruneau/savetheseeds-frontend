@@ -2,6 +2,7 @@ import styles from "../styles/Inscription.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { login, logout } from "../reducers/user";
+import Link from 'next/link';
 
 function Inscription() {
   const [signUpUsername, setSignUpUsername] = useState("");
@@ -35,7 +36,6 @@ function Inscription() {
         if (data.result) {
           console.log(data);
           dispatch(login({ username: signUpUsername, token: data.token }));
-
           setSignUpUsername("");
           setSignUpPassword("");
           setSignUpBirthday("");
@@ -159,9 +159,11 @@ function Inscription() {
           </button>
         </div>
         <div>
+          <Link href='/'>
           <button className={styles.creer} onClick={() => handleRegister()}>
             Créer son compte
           </button>
+          </Link>
         </div>
       </div>
 

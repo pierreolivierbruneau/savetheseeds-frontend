@@ -2,12 +2,21 @@ import styles from "../styles/Home.module.css";
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../reducers/user";
+import { Button } from 'antd';
+import Link from 'next/link';
 
 function Home() {
 
 
 
   const [lookingForSeeds, setLookingForSeeds] = useState("");
+  
+  //Fonction lien avec la page Tutos quand appui sur Enter
+  const handleKeyDown = (event) => {
+      if(event.key === 'Enter'){
+      window.location.href=`/tutos`
+    }
+  }
 
 
   return (
@@ -20,11 +29,14 @@ function Home() {
             className={styles.inputStyle}
             onChange={(e) => setLookingForSeeds(e.target.value)}
             value={lookingForSeeds}
+            onKeyDown={handleKeyDown}
             placeholder="Recherche de Type de Graines"
           />
         </div>
-        <div className={styles.button2}>
-          Quelles Graines Planter à proximité
+        <div>
+          <Link href='/maps'>
+          <Button className={styles.button2}>Quelles Graines Planter à proximité</Button>
+          </Link>
         </div>
       </div>
       <div className={styles.compteur}>

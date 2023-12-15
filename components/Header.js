@@ -30,7 +30,7 @@ function Header() {
               <span className={styles.accueil}>Accueil</span>
             </Link>
             <Link href="/maps">
-              <span className={styles.accueil}>Geolocalisation</span>
+              <span className={styles.accueil}>Géolocalisation</span>
             </Link>
             <Link href="/forum">
               <span className={styles.accueil}>Forum</span>
@@ -43,7 +43,7 @@ function Header() {
             </Link>
             <button className={styles.accueil}>Dons</button>
             <Link href="/about">
-              <span className={styles.accueil}>About US</span>
+              <span className={styles.accueil}>A propos</span>
             </Link>
           </div>
         </div>

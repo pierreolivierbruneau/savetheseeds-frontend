@@ -78,11 +78,14 @@ function Modale() {
       </>
       :
 <>
-        <Link href="/inscription" ><span className={styles.inscription}>Inscription</span></Link>
-
+        <div>
+        <Link href="/inscription"><Button  className={styles.bttn1}>Inscription</Button></Link>
+        </div>
+        <div>
       <Button className={styles.bttn1} onClick={() =>openModal()}>
         Connexion
       </Button>
+        </div>
       </>  }
      
       <Modal className={styles.modal} 
