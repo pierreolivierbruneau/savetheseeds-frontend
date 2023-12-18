@@ -54,14 +54,7 @@ function Inscription() {
       });
   };
 
-  const loader = async () => {
-    const user = await getUser();
-    if (user) {
-      return redirect("/");
-    }
-    return null;
-  };
-
+ 
   return (
     <div>
       <h1 className={styles.title}>CRÉER UN COMPTE</h1>

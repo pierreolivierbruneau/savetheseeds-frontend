@@ -1,9 +1,11 @@
 import styles from "../styles/Forum2.module.css";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 function Forum2() {
   const [comment, setComment] = useState("");
   const [title, setTitle] = useState("");
+  const router = useRouter();
 
   const onClickHandler = () => {
     fetch("http://localhost:3000/message/newmessage", {
@@ -14,7 +16,7 @@ function Forum2() {
       .then((response) => response.json())
       .then((data) => {
         if (data.result === true) {
-          string.link((href = "http://loccalhost:3001/forum"));
+          router.push("/forum");
         }
       });
   };
