@@ -1,9 +1,17 @@
 import styles from "../styles/Profil.module.css";
 
+import { Button } from 'antd';
+
+
+
+
+
 function Profil() {
+
   const handleClick = () => {
-    console.log("Click detected");
-  };
+
+
+}
 
   return (
     <div className={styles.mainContainer}>
@@ -45,11 +53,11 @@ function Profil() {
         <div className={styles.middleContainer}>
           <div className={styles.liste}>List des derniers semis : </div>
           <div className={styles.input}>
-            <input type="text" placeholder="Semis..."></input>
+            <input type="text" placeholder="Semis..." id='ajout semis' onChange={(e) => setAddseed(e.target.value)} value={addseed} ></input>
             <img
               src="https://res.cloudinary.com/dt30jr39q/image/upload/v1702637124/slxtmmru1hmabbguowjf.avif"
               className={styles.plantbtn}
-              onClick={handleClick}
+              onClick={() => handleClick()}
             ></img>
           </div>
         </div>
