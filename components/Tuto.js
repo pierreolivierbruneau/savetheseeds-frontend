@@ -111,7 +111,7 @@ function Tuto() {
                 <p>
                   En suivant ces quelques conseils, vous réussirez à récolter
                   des graines de qualité qui vous permettront de cultiver de
-                  beaux
+                  beaux fruits
                   <p style={{ fontWeight: "bold" }}>
                     Voici quelques exemples de fruits qui produisent des graines
                     :
