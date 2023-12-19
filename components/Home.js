@@ -1,5 +1,5 @@
 import styles from "../styles/Home.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../reducers/user";
 import { Button } from 'antd';
@@ -8,6 +8,7 @@ import Link from 'next/link';
 function Home() {
 
 
+  const [allseeds, setAllseeds] = useState("");
 
   const [lookingForSeeds, setLookingForSeeds] = useState("");
   
@@ -18,6 +19,14 @@ function Home() {
     }
   }
 
+useEffect(() => {  
+fetch("http://localhost:3000/seeds/allseeds")
+.then(response => response.json())
+.then(data => {
+  console.log(data);
+  setAllseeds(data)
+})
+}, []);
 
   return (
     <main className={styles.main}>
@@ -41,7 +50,7 @@ function Home() {
       </div>
       <div className={styles.compteur}>
         <p>COMPTEUR DE SEMIS</p>
-        <div className={styles.nombre}>8525</div>
+        <div className={styles.nombre}>{allseeds.value}</div>
         <svg
           className={styles.semis}
           xmlns="http://www.w3.org/2000/svg"

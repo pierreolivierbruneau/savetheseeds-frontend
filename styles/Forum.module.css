@@ -11,8 +11,13 @@
 }
 
 .topContainer{
-    max-width: 1300px;
+    flex:1;
+max-width:1100px;
 
+}
+
+.seedling{
+    color: #E1E8BA;
 }
 
 .title {
@@ -29,15 +34,23 @@
 
 
 .recherche{
-    color:#E1E8BA;
+    background-color:#E1E8BA;
+    color: #224229;
     font-size: large;
     font-weight: 600;
+    border-color: #224229;
+}
+
+
+.recherche:hover{
+    box-shadow: 0 12px 10px 0 #66a673, 0 17px 20px 0 #437c50;
 }
 
 .textbox{
    color: #224229; 
    padding: 5px 20px;
    margin-top: 10px;
+   border-color: #224229;
 }
 
 .categories{
@@ -58,12 +71,16 @@
 }
 
 .pubbtn{
-    color:#224229; 
-    background-color: #E1E8BA;
-    padding: 8px 8px;
-    border: none;
+    background-color:#E1E8BA;
+    color: #224229;
+    font-size: large;
+    font-weight: 600;
+    border-color: #224229;
 }
 
+.pubbtn:hover{
+    box-shadow: 0 12px 10px 0 #66a673, 0 17px 20px 0 #437c50;
+}
 
 
 .bottom{
@@ -74,7 +91,11 @@
     justify-content: space-between;
     font-size: small;
     padding: 20px;
-    margin-top: 10px;;
+    margin-top: 10px;
+}
+.box{
+  font-style: oblique;
+  
 }
 
 .nav{
