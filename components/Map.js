@@ -1,10 +1,12 @@
 import { MapContainer, TileLayer, Polygon, Rectangle, Popup, Circle, Polyline, Marker, useMapEvents, MapConsumer } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import icon from "./Marker";
 import L from "leaflet";
 
 function Map() {
+
+
   const center = [43.705836896399994, 7.260651102906279]
   const center1 = [43.08399379118767, 5.932892008428375]
   const center2 = [43.28894741645583, 5.39491390945662]
@@ -45,11 +47,20 @@ function Map() {
 ]
 
 
+
+const [place, setPlace] = useState ([])
+
+
   const redOptions = { color: 'red' }
   const greenOptions = { color: 'green' }
   const fillBlueOptions = { fillColor: 'blue' }
   const purpleOptions = { color: 'purple' }
-
+  
+  const addToArr = (coords) => {
+    setPlace((prev) => [...prev, coords])
+  }
+  
+  console.log("Nouvel emplacement :", place);
 
   return (
     <MapContainer center={[latitude, longitude]} zoom={13} style={{ height: "calc(100vh - 180px)", width: "100vw", position: "relative" }}
@@ -60,15 +71,15 @@ function Map() {
         map.target.on("click", function (e) {
           // extraits les clés lat & lng de l'objet e.latlng
           const { lat, lng } = e.latlng;
+          addToArr({lat, lng});
           // place le marker sur la map grace aux coords extraites
           L.marker([lat, lng], { icon }).addTo(map.target);
 
-
           // Ajouter dans un useState ou en BDD
 
-          console.log("lat", lat)
-          console.log("lng", lng)
-
+          // console.log("lat", lat)
+          // console.log("lng", lng)
+          
         });
       }}>
       <div style={{ position: "absolute", height: "200px", width: "400px", backgroundColor: "#ffffffc4", padding: "15px", zIndex: 1000, bottom: 0, right: "10px", borderRadius: "20px" }}>
@@ -111,6 +122,7 @@ function Map() {
       <Circle center={center3} pathOptions={redOptions} radius={5000} >
         <Popup>zone ou planter ou il est interdit de planter</Popup>
       </Circle>
+      
     </MapContainer>
   );
 }
