@@ -2,8 +2,8 @@ import styles from "../styles/Profil.module.css";
 
 function Profil() {
   const handleClick = () => {
-    console.log("Click detected");
-  };
+    console.log("Click detected")
+};
 
   return (
     <div className={styles.mainContainer}>
@@ -49,7 +49,7 @@ function Profil() {
             <img
               src="https://res.cloudinary.com/dt30jr39q/image/upload/v1702637124/slxtmmru1hmabbguowjf.avif"
               className={styles.plantbtn}
-              onClick={handleClick}
+              onClick={() => handleClick()}
             ></img>
           </div>
         </div>
