@@ -1,0 +1,26 @@
+.map-container {
+    position: relative;
+  }
+  
+  .legend {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .legend-color {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+  }
