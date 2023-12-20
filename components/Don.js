@@ -80,8 +80,8 @@ function Don() {
       <div></div>
       <div className={styles.blankspace}></div>
       <div>
-        <Link href="https://donate.stripe.com/test_9AQaET6kj3ftfYY5kk">
-          <Button className={styles.button}>Valider mon don</Button>
+        <Link href="https://donate.stripe.com/test_28o4gveQPeYb0009AC">
+          <Button className={styles.button}>Faire un Don</Button>
         </Link>
       </div>
       <div className={styles.blankspace}></div>

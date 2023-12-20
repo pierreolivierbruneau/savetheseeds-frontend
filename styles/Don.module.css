@@ -25,6 +25,7 @@
     color: #224229;
     cursor: pointer;
     padding-left: 10px;
+
 }
 
 @keyframes slideIn {
@@ -43,6 +44,8 @@
     max-height: 0;
   animation-duration: 1s;
   animation-fill-mode: forwards;
+  padding-right: 20px;
+  padding-left: 10px;
 }
 
 .blankspace{
@@ -65,8 +68,8 @@
     font-size: 30px;
     font-family: 'Poppins';
     color: #224229;
-   
 }
+
 
 .image{
     margin-bottom: 30px;

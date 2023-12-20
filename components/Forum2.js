@@ -2,6 +2,7 @@ import styles from "../styles/Forum2.module.css";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
+import { text } from "@fortawesome/fontawesome-svg-core";
 
 function Forum2() {
   const user = useSelector((state) => state.user.value);
@@ -11,19 +12,28 @@ function Forum2() {
   const [title, setTitle] = useState("");
 
   const onClickHandler = () => {
-    fetch("http://localhost:3000/message/newmessage", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ title: title, text: comment, token: user.token }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.result === true) {
-          router.push("/forum");
-        } else {
-          console.log("Utilisateur non connecté");
-        }
-      });
+    if (user.token === null) {
+      //to not allow someone to submit a post ithout a token
+      console.log("Utilisateur non connecté");
+    } else {
+      fetch("http://localhost:3000/message/newmessage", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          title: title,
+          text: comment,
+          token: user.token,
+        }),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.result === true) {
+            router.push("/forum");
+          } else {
+            console.log("Utilisateur non connecté");
+          }
+        });
+    }
   };
 
   console.log("comment and title states:", comment, title);

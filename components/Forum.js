@@ -47,7 +47,8 @@ function Forum() {
         setMessage(data.message);
       });
   }
-  //sets the messages to 2 lists so that when 1 is changed by the search it can copy the other and return it to the full list
+  //sets the messages to 2 lists so that when 1 is changed by the search it
+  // can copy the other and return it to the full list
   function handleReset() {
     setMessage([...allMessagesData]);
     setSearchMsg("");
@@ -111,7 +112,7 @@ function Forum() {
 
             <div>Date de publi.</div>
 
-            <div>Num de msg</div>
+            <div>Messages</div>
           </div>
           <div className={styles.box}>{allMessages}</div>
           <div className={styles.nav}>

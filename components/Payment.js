@@ -32,9 +32,7 @@ function Payment() {
         ></input>
         <p> Paiement par carte</p>
       </div>
-      <div>
-        <a href="https://buy.stripe.com/test_fZecN12438zN3cc3cd">Pay</a>
-      </div>
+      <div>Pay</div>
       <div className={styles.creditCard}>
         <div className={styles.numberCard}>
           <label>Numéro carte</label>
