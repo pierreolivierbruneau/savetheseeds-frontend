@@ -21,6 +21,8 @@ function Forum2() {
       .then((data) => {
         if (data.result === true) {
           router.push("/forum");
+        } else {
+          console.log("Utilisateur non connecté");
         }
       });
   };
