@@ -89,14 +89,20 @@ function Forum() {
             >
               Recherche
             </button>
-            <button className={styles.recherche} onClick={() => handleReset()}>
-              <FontAwesomeIcon icon={faRotateLeft} />
+            <button
+              id="search"
+              className={styles.recherche}
+              onClick={() => handleReset()}
+            >
+              <FontAwesomeIcon icon={faRotateLeft} id="refresh" />
             </button>
           </div>
 
           <div className={styles.publier}>
             <Link href="/forum2">
-              <button className={styles.pubbtn}>Publier un post</button>
+              <button className={styles.pubbtn} id="publish button">
+                Publier un post
+              </button>
             </Link>
           </div>
 
