@@ -10,6 +10,7 @@ function Forum2() {
   const router = useRouter();
   const [comment, setComment] = useState("");
   const [title, setTitle] = useState("");
+ 
 
   const onClickHandler = () => {
     if (user.token === null) {
