@@ -1214,7 +1214,7 @@ async-validator@^4.1.0:
   resolved "https://registry.npmjs.org/async-validator/-/async-validator-4.2.5.tgz"
   integrity sha512-7HhHjtERjqlNbZtqNqy2rckN/SpOOlmDliet+lP7k+eKZEjPk3DgyeU9lIXLdeLz0uBbbVp+9Qdow9wJWgwwfg==
 
-async@~>0.1.15, async@0.1.15:
+async@0.1.15, async@~>0.1.15:
   version "0.1.15"
   resolved "https://registry.npmjs.org/async/-/async-0.1.15.tgz"
   integrity sha512-AGVE6WcRsWX4QudgrVhdDUKAgCv67EwmzP3yEny/AI7/WqM+J8CStwMbGqeXC9p8ih4qota04EaMim/WvA8OCw==
@@ -1542,9 +1542,6 @@ dayjs@^1.11.1:
   resolved "https://registry.npmjs.org/dayjs/-/dayjs-1.11.10.tgz"
   integrity sha512-vjAczensTgRcqDERK0SR2XMwsF/tSvnvlv6VcF2GIhg6Sx4yOIt/irsr1RDJsKiIyBzJDpCoXiWWq28MqH2cnQ==
 
-<<<<<<< HEAD
-debug@4, debug@^4.1.0, debug@^4.1.1:
-=======
 db-info@0.0.3:
   version "0.0.3"
   resolved "https://registry.npmjs.org/db-info/-/db-info-0.0.3.tgz"
@@ -1553,8 +1550,7 @@ db-info@0.0.3:
     async "~>0.1.15"
     optimist "~0.3.0"
 
-debug@^4.1.0, debug@^4.1.1, debug@4:
->>>>>>> e45910a4a53818a4a02f75f2243d080810b2792e
+debug@4, debug@^4.1.0, debug@^4.1.1:
   version "4.3.4"
   resolved "https://registry.npmjs.org/debug/-/debug-4.3.4.tgz"
   integrity sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==
