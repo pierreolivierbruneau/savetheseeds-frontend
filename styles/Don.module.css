@@ -8,7 +8,7 @@
     text-align: center;
     color: #224229;
     font-family: 'Libre Baskerville';
-    font-size: 80px;
+    font-size: 60px;
     font-weight: bold;
     margin-top: 40px;
     margin-bottom: 40px;
@@ -24,6 +24,7 @@
     font-family: 'Poppins';
     color: #224229;
     cursor: pointer;
+    padding-left: 10px;
 }
 
 @keyframes slideIn {
@@ -45,7 +46,7 @@
 }
 
 .blankspace{
-    height:20px;
+    height:30px;
 }
 
 .input{
@@ -64,5 +65,9 @@
     font-size: 30px;
     font-family: 'Poppins';
     color: #224229;
-    
+   
+}
+
+.image{
+    margin-bottom: 30px;
 }
