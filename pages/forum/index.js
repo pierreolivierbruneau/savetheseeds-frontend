@@ -1,4 +1,4 @@
-import Forum from '../components/Forum.js';
+import Forum from '../../components/Forum.js';
 
 function ForumPage(){
     return <Forum />
