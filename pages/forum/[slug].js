@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRouter } from 'next/router';
 import { useSelector } from "react-redux";
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import styles from "../../styles/Post.module.css";
 import { faUser, faComment, faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
 import { Button } from 'antd';
@@ -10,7 +10,7 @@ import { Button } from 'antd';
 function posteBlog() {
     const user = useSelector((state) => state.user.value);
     //const slug= useSelector((state) => state.slug.value);
-
+   
     //Function to fetch each post and display all the comments of the post in a slug page (1)
     const router = useRouter();
     const [posteInformation, setPosteInformation] = useState({});
@@ -21,6 +21,13 @@ function posteBlog() {
 
     const handleClick = () => {
         console.log('Click')
+        const commentData = {
+            content: newComment,
+           author: {username: user.username},
+            date: new Date().toISOString()
+            
+          };
+          console.log('comment is', commentData)
         fetch(`http://localhost:3000/answers/${posteInformation.slug}`, {
             method: 'POST',
             headers: {'Content-type': 'application/json'},
@@ -29,7 +36,7 @@ function posteBlog() {
         .then((response) => response.json())
         .then((data) => {
             if(data.result === true){
-                setAnswers([...answers, newComment])
+                setAnswers([...answers, commentData])
                 setNewComment('')               
             }
         })
@@ -39,7 +46,7 @@ function posteBlog() {
     const onChangeHandler = (e) => {
         setNewComment(e.target.value)
     }
-
+    
     //Function to fetch each post and display all the comments of the post in a slug page (2)
     useEffect(() => {
         if(router.query.slug) {
@@ -64,16 +71,16 @@ function posteBlog() {
         year: 'numeric'
       });
 
-      console.log('dataaaaaa', posteInformation.author?.username)
+      console.log('answers is', answers)
       const allanswers = answers.map((data, i) => {
-          console.log('data is 123:', data.author?.username)
+        console.log('user is', data.author?.username)
+          console.log('data is :', data?.date)
           const formattedDate2 = new Date(data.date).toLocaleDateString('en-GB', {
-            day: '2-digit',
-            month: '2-digit',
-            year: 'numeric'
-          }); 
-          
-          
+              day: '2-digit',
+              month: '2-digit',
+              year: 'numeric'
+            }
+          );       
         return(
             <div>
                 <div>
@@ -86,8 +93,7 @@ function posteBlog() {
                     </div>
                 </div>
                 <p className={styles.text} key={i}>{data.content}</p>
-            </div>
-            
+            </div>            
         ) 
     })
     
