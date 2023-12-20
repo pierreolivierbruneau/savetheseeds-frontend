@@ -9,6 +9,7 @@ function Forum2() {
   const router = useRouter();
   const [comment, setComment] = useState("");
   const [title, setTitle] = useState("");
+ 
 
   const onClickHandler = () => {
     fetch("http://localhost:3000/message/newmessage", {
@@ -20,6 +21,8 @@ function Forum2() {
       .then((data) => {
         if (data.result === true) {
           router.push("/forum");
+        } else {
+          console.log("Utilisateur non connecté");
         }
       });
   };

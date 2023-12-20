@@ -33,6 +33,7 @@ function Forum() {
       <MessageBox
         key={i}
         title={data.title}
+        slug={data.slug}
         date_publish={formatDate(data.date_publish)}
         nbAnswers={data.answers.length}
       />
@@ -89,14 +90,20 @@ function Forum() {
             >
               Recherche
             </button>
-            <button className={styles.recherche} onClick={() => handleReset()}>
-              <FontAwesomeIcon icon={faRotateLeft} />
+            <button
+              id="search"
+              className={styles.recherche}
+              onClick={() => handleReset()}
+            >
+              <FontAwesomeIcon icon={faRotateLeft} id="refresh" />
             </button>
           </div>
 
           <div className={styles.publier}>
             <Link href="/forum2">
-              <button className={styles.pubbtn}>Publier un post</button>
+              <button className={styles.pubbtn} id="publish button">
+                Publier un post
+              </button>
             </Link>
           </div>
 
@@ -132,11 +139,15 @@ function Forum() {
 
 function MessageBox(props) {
   return (
-    <div className={styles.bottom}>
-      <div>{props.title}</div>
-      <div>{props.date_publish}</div>
-      <div>{props.nbAnswers} réponses</div>
-    </div>
+    <Link href={`/forum/${props.slug}`} >
+      <div className={styles.bottom} style={{cursor:"pointer"}}>
+        <div>
+          {props.title}
+        </div>
+        <div>{props.date_publish}</div>
+        <div>{props.nbAnswers} réponses</div>
+      </div>
+    </Link>
   );
 }
 

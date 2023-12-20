@@ -1,4 +1,4 @@
-import styles from "../../styles/Tutos.module.css";
+import styles from "../../styles/Semis.module.css";
 function CreerVosSemis() {
   return (
     <div>

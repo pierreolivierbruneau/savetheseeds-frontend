@@ -1,0 +1,138 @@
+.main{
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    font-family: 'Libre Baskerville';
+    font-size: 80px;
+    color: #224229;
+    text-align: center;
+}
+
+.postTitle{
+    font-family: 'Poppins';
+    font-size: 40px;
+    color: #224229;
+    text-align: center;
+}
+
+.date{
+    font-family: 'Poppins';
+    font-size: 30px;
+    color: #B9B9B9;
+    text-align: center;
+}
+
+.userContent {
+    display: flex;
+    justify-content: center;
+    color: #224229;
+    font-size: 28px;
+  
+}
+
+.user{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 5px;
+  
+}
+
+.numberComment{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.user::after{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 20px; /* Adjust the height as needed */
+    background-color: #224229; 
+    margin: 0 10px; /* Adjust the spacing as needed */
+}
+
+.post{
+    font-size: 25px;
+    margin-top: 2rem;
+    display: flex;
+    align-items: flex-end;
+}
+
+.quote{
+    color: #224229;
+    opacity: 25%;
+    position: absolute;   
+    font-size: 150px;
+}
+
+.answers{
+    display: flex;
+    flex-direction: column;    
+    color: #224229;
+    font-family: 'Poppins';   
+    margin-top: 50px;  
+    text-indent: 10px;
+}
+
+.titleAnswers{
+    font-size: 40px;
+}
+
+.user2{
+    display: flex;
+    align-items: center;
+}
+.date2{
+    color:#B9B9B9;
+    font-size: 16px;
+}
+
+.text{
+    border: 1px solid #224229;
+    color: black;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.lign{
+    display: flex;
+    align-items: center;
+    border: 1px solid #224229;
+    width: 95%;
+    margin-top: 50px;
+}
+
+.comment{
+    display: flex;
+    flex-direction: column;    
+    width: 100%;
+    color: #224229;
+    font-family: 'Poppins';  
+}
+
+.response{
+    font-size: 40px;
+}
+
+.input{
+    background-color: #E1E8BA;
+    border-radius: 17px;
+    width: 95%;
+    height: 200px;
+    border: none;
+    text-indent: 10px;    
+}
+
+.button{
+    background-color: #224229;
+    color: #FFFFFF;
+    width: 300px;
+    height: 100px;
+    margin-top: 30px;
+}

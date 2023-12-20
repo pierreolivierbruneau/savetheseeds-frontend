@@ -77,26 +77,16 @@ function Don() {
         )}
       </div>
       <div className={styles.blankspace}></div>
-      <div>
-        <input
-          type="text"
-          placeholder="....€"
-          id="Montant don"
-          className={styles.input}
-        ></input>
-      </div>
+      <div></div>
       <div className={styles.blankspace}></div>
       <div>
-        <Link href="/payments">
+        <Link href="https://donate.stripe.com/test_9AQaET6kj3ftfYY5kk">
           <Button className={styles.button}>Valider mon don</Button>
         </Link>
       </div>
       <div className={styles.blankspace}></div>
-      <div>
-        <img
-          src="tutoPrintemps.jpg"
-          style={{ width: "300px", height: "200px" }}
-        />
+      <div className={styles.image}>
+        <img src="hands.jpg" style={{ width: "300px", height: "200px" }} />
       </div>
     </div>
   );
