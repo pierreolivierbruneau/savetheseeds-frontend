@@ -1,11 +1,14 @@
 import { MapContainer, TileLayer, Polygon, Rectangle, Popup, Circle, Polyline, Marker, useMapEvents, MapConsumer } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css';
 import { useEffect, useState } from 'react';
+import { useSelector } from "react-redux";
 import icon from "./Marker";
 import L from "leaflet";
+import 'leaflet/dist/leaflet.css';
 
 function Map() {
 
+  const { token } = useSelector((state) => state.user.value);
 
   const center = [43.705836896399994, 7.260651102906279]
   const center1 = [43.08399379118767, 5.932892008428375]
@@ -35,32 +38,80 @@ function Map() {
 
 
   const multiPolyline = [
- 
-  [
-    [43.747590156668394, 5.513841201961662],
-    [43.56033366797934, 5.459000649524677],
-    [43.42192996440685, 6.423914968253879],
-    [43.79186727778059, 7.16983260191406],
-    [43.747590156668394, 5.513841201961662],
-  ],
- 
-]
+
+    [
+      [43.747590156668394, 5.513841201961662],
+      [43.56033366797934, 5.459000649524677],
+      [43.42192996440685, 6.423914968253879],
+      [43.79186727778059, 7.16983260191406],
+      [43.747590156668394, 5.513841201961662],
+    ],
+
+  ]
 
 
 
-const [place, setPlace] = useState ([])
+  const [place, setPlace] = useState([])
+
 
 
   const redOptions = { color: 'red' }
   const greenOptions = { color: 'green' }
   const fillBlueOptions = { fillColor: 'blue' }
   const purpleOptions = { color: 'purple' }
-  
-  const addToArr = (coords) => {
-    setPlace((prev) => [...prev, coords])
-  }
-  
-  console.log("Nouvel emplacement :", place);
+
+  const addToArr = async (coords) => {
+    try {
+
+      setPlace((prev) => [...prev, coords]);
+
+      const response = await fetch("http://localhost:3000/pointgps/savepointgps", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({
+          latitude: coords.lat,
+          longitude: coords.lng,
+          token: token,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Erreur lors de la requête POST : ${response.status}`);
+      }
+      const data = await response.json();
+      console.log("Réponse du backend :", data);
+    } catch (error) {
+      console.error("Erreur :", error);
+
+    }
+  };
+
+
+
+  useEffect(() => {
+    console.log(token);
+    fetch("http://localhost:3000/pointgps/displaypointgps", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        token: token,
+      }),
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        setPlace(data.value)
+      })
+  }, []);
+
+
 
   return (
     <MapContainer center={[latitude, longitude]} zoom={13} style={{ height: "calc(100vh - 180px)", width: "100vw", position: "relative" }}
@@ -71,7 +122,7 @@ const [place, setPlace] = useState ([])
         map.target.on("click", function (e) {
           // extraits les clés lat & lng de l'objet e.latlng
           const { lat, lng } = e.latlng;
-          addToArr({lat, lng});
+          addToArr({ lat, lng });
           // place le marker sur la map grace aux coords extraites
           L.marker([lat, lng], { icon }).addTo(map.target);
 
@@ -79,14 +130,14 @@ const [place, setPlace] = useState ([])
 
           // console.log("lat", lat)
           // console.log("lng", lng)
-          
+
         });
       }}>
       <div style={{ position: "absolute", height: "200px", width: "400px", backgroundColor: "#ffffffc4", padding: "15px", zIndex: 1000, bottom: 0, right: "10px", borderRadius: "20px" }}>
 
         <ul>
           <li style={{ color: "red" }}>
-          Zone où il est interdit de planter
+            Zone où il est interdit de planter
           </li>
           <li style={{ color: "green" }}>
             Zone où planter des pommier pour son altitude, son climat favorable, la réduction des maladies et l'eau de qualité
@@ -107,7 +158,12 @@ const [place, setPlace] = useState ([])
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
 
-      <Polygon pathOptions={fillBlueOptions} positions={polygon}/>
+      {place.map((point, index) => (
+        <Marker key={index} position={[point.lat, point.lng]} />
+
+      ))}
+
+      <Polygon pathOptions={fillBlueOptions} positions={polygon} />
       <Rectangle bounds={rectangle} pathOptions={greenOptions} />
       <Polyline pathOptions={purpleOptions} positions={multiPolyline} />
       <Circle center={center} pathOptions={redOptions} radius={3000} >
@@ -122,7 +178,7 @@ const [place, setPlace] = useState ([])
       <Circle center={center3} pathOptions={redOptions} radius={5000} >
         <Popup>zone ou planter ou il est interdit de planter</Popup>
       </Circle>
-      
+
     </MapContainer>
   );
 }
