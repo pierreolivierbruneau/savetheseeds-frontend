@@ -4,11 +4,16 @@ function PlanterAuPrintemps() {
   return (
     <div>
       <main className={styles.main}>
-        <div className={styles.containerTitle}>
-          <h3 className={styles.title}>La Plantation de Fruits au Printemps</h3>
-        </div>
-        <div style={{ textAlign: "center" }}>
-          <h4 className={styles.sousTitle}>Conseils et Astuces</h4>
+        <div>
+          <div className={styles.containerTitle}>
+            <h3 className={styles.title}>
+              La Plantation de Fruits au Printemps
+            </h3>
+            <img src="/tutoPrintemps.jpg" className={styles.imageTutos} />{" "}
+          </div>{" "}
+          <div style={{ textAlign: "center" }}>
+            <h4 className={styles.sousTitle}>Conseils et Astuces</h4>
+          </div>{" "}
         </div>
         <div className={styles.textSection}>
           <p style={{ fontSize: 20 }}>
@@ -16,6 +21,7 @@ function PlanterAuPrintemps() {
             pour planter une variété de fruits délicieux dans votre jardin.
             Suivez ces conseils pratiques pour une plantation réussie :
           </p>
+
           <ul>
             <li className={styles.list}>
               <p style={{ fontWeight: "bold" }}>1. Sélection des Fruits :</p> Au

@@ -1,4 +1,5 @@
 .title {
+  /* z-index: 1; */
   color: #224229;
   font-family: "Libre Baskerville", serif;
   text-align: center;
@@ -13,9 +14,11 @@
 }
 
 .containerTitle {
-  margin-top: 100px;
-  padding: 30px;
+  margin-top: 50px;
+  padding: 50px;
+  /* position: relative; */
 }
+
 .sousTitle {
   margin-top: 0;
   color: #224229;
@@ -31,6 +34,15 @@
 
 .imageStyle {
   height: 250px;
+  padding: 20px;
+}
+.imageTutos {
+  opacity: 0.6;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background-position: center;
+  size-adjust: auto;
 }
 
 .section {
@@ -38,6 +50,8 @@
   margin: 40px auto;
   max-width: 1000px;
   margin-top: 40px;
+  margin-left: 300px;
+  margin-right: 300px;
 }
 
 .textSection {
@@ -45,7 +59,8 @@
   /* display: flex; */
   max-width: 1400px;
   /* flex-wrap: wrap; */
-  margin: 50px auto;
+  margin-left: 300px;
+  margin-right: 300px;
   gap: 50px;
   justify-content: center;
 }

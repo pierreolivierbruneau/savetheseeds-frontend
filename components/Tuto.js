@@ -14,7 +14,7 @@ function Tuto() {
         pagename="planter-au-printemps"
       />
       <TutoCard
-        sousTitle="Panter en été"
+        sousTitle="Planter en été"
         desc=" L'été est une saison chaude et ensoleillée, idéale pour la
         croissance des plantes. Cependant, il est important de veiller
         à ce que les plantes aient suffisamment d'eau, car le sol peut
@@ -32,7 +32,7 @@ function Tuto() {
         pagename="planter-en-automne"
       />
       <TutoCard
-        sousTitle="Panter en hiver"
+        sousTitle="Planter en hiver"
         desc=" L'hiver est une saison difficile pour la culture des fruits et
         légumes. Les températures sont basses et les jours sont
         courts, ce qui peut ralentir la croissance des plantes.
@@ -44,14 +44,13 @@ function Tuto() {
 
       <TutoCard
         sousTitle="Créer vos semis"
-        desc="Les graines de fruits se trouvent enfermées dans une coque ou
-        une enveloppe.
+        desc="Les graines de fruits se trouve
         Elles peuvent être récupérées pour être replantées et produire
         de nouveaux fruits.
         La récupération des graines de fruits est un excellent moyen
         d'économiser de l'argent et de réduire votre impact
         environnemental."
-        img="/hiver.jpg"
+        img="/semis.jpg"
         pagename="creer-vos-semis"
       />
     </div>

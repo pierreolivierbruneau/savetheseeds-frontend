@@ -5,7 +5,8 @@ function PlanterEnHiver() {
     <div>
       <main className={styles.main}>
         <div className={styles.containerTitle}>
-          <h3 className={styles.title}>La Plantation de Fruits en Hiver</h3>
+          <h3 className={styles.title}>La Plantation Hivernale</h3>
+          <img src="/marché.jpg" className={styles.imageTutos} />{" "}
         </div>
         <div style={{ textAlign: "center" }}>
           <h4 className={styles.sousTitle}>Conseils et Astuces</h4>
