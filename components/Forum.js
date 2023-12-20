@@ -33,6 +33,7 @@ function Forum() {
       <MessageBox
         key={i}
         title={data.title}
+        slug={data.slug}
         date_publish={formatDate(data.date_publish)}
         nbAnswers={data.answers.length}
       />
@@ -138,11 +139,15 @@ function Forum() {
 
 function MessageBox(props) {
   return (
-    <div className={styles.bottom}>
-      <div>{props.title}</div>
-      <div>{props.date_publish}</div>
-      <div>{props.nbAnswers} réponses</div>
-    </div>
+    <Link href={`/forum/${props.slug}`} >
+      <div className={styles.bottom} style={{cursor:"pointer"}}>
+        <div>
+          {props.title}
+        </div>
+        <div>{props.date_publish}</div>
+        <div>{props.nbAnswers} réponses</div>
+      </div>
+    </Link>
   );
 }
 

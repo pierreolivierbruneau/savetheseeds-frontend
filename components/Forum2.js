@@ -9,7 +9,7 @@ function Forum2() {
   const router = useRouter();
   const [comment, setComment] = useState("");
   const [title, setTitle] = useState("");
-  const router = useRouter();
+ 
 
   const onClickHandler = () => {
     fetch("http://localhost:3000/message/newmessage", {
