@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRouter } from 'next/router';
+import { useSelector } from "react-redux";
 import { useEffect, useState } from 'react';
 import styles from "../../styles/Post.module.css";
 import { faUser, faComment, faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
@@ -7,11 +8,39 @@ import { Button } from 'antd';
 
 
 function posteBlog() {
+    const user = useSelector((state) => state.user.value);
+    //const slug= useSelector((state) => state.slug.value);
+
+    //Function to fetch each post and display all the comments of the post in a slug page (1)
     const router = useRouter();
     const [posteInformation, setPosteInformation] = useState({});
     const [numberComments, setNumberComments] = useState('');
     const [answers, setAnswers] = useState([]);
+    //Function to post a comment to the post
+    const [newComment, setNewComment] = useState('');
 
+    const handleClick = () => {
+        console.log('Click')
+        fetch(`http://localhost:3000/answers/${posteInformation.slug}`, {
+            method: 'POST',
+            headers: {'Content-type': 'application/json'},
+            body: JSON.stringify({content: newComment, token: user.token})
+        })
+        .then((response) => response.json())
+        .then((data) => {
+            if(data.result === true){
+                setAnswers([...answers, newComment])
+                setNewComment('')               
+            }
+        })
+        
+    }
+
+    const onChangeHandler = (e) => {
+        setNewComment(e.target.value)
+    }
+
+    //Function to fetch each post and display all the comments of the post in a slug page (2)
     useEffect(() => {
         if(router.query.slug) {
 
@@ -28,8 +57,22 @@ function posteBlog() {
         }
 
     },[router.query])
-   console.log('data', posteInformation.author?.username)
-    const allanswers = answers.map((data, i) => {
+
+    const formattedDate = new Date(posteInformation.date_publish).toLocaleDateString('en-GB', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric'
+      });
+
+      console.log('dataaaaaa', posteInformation.author?.username)
+      const allanswers = answers.map((data, i) => {
+          console.log('data is 123:', data.author?.username)
+          const formattedDate2 = new Date(data.date).toLocaleDateString('en-GB', {
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric'
+          }); 
+          
           
         return(
             <div>
@@ -37,8 +80,8 @@ function posteBlog() {
                     <div className={styles.user2}>
                         <FontAwesomeIcon icon={faUser} size='3x'/>
                         <div>
-                            <p>{data.author.username}</p>
-                            <p className={styles.date2}>{data.date}</p>
+                            <p>{data.author?.username}</p>
+                            <p className={styles.date2}>{formattedDate2}</p>
                         </div>
                     </div>
                 </div>
@@ -55,7 +98,7 @@ function posteBlog() {
         <h3 className={styles.title}>Forum</h3>
         <h4 className={styles.postTitle}>{posteInformation?.title}</h4>
             </div>
-        <p className={styles.date}>{posteInformation?.date_publish}</p>
+        <p className={styles.date}>{formattedDate}</p>
         <div className={styles.userContent}>
             <div className={styles.user}>
         <FontAwesomeIcon icon={faUser}/><p>{posteInformation.author?.username}</p>
@@ -74,9 +117,9 @@ function posteBlog() {
          <div className={styles.comment}>
             <h4 className={styles.response}>Répondre</h4> 
             <p>Message</p>
-        <input className={styles.input}>
+        <input className={styles.input} onChange={onChangeHandler}>
         </input>
-        <Button className={styles.button}>Répondre</Button>
+        <Button className={styles.button}onClick={handleClick}>Répondre</Button>
         </div>
       </div>
     </div>
