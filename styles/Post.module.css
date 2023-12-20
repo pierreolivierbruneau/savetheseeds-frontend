@@ -59,16 +59,15 @@
 .post{
     font-size: 25px;
     margin-top: 2rem;
-    background-color: lightblue;
     display: flex;
     align-items: flex-end;
 }
 
 .quote{
     color: #224229;
-    opacity: 35%;
+    opacity: 25%;
     position: absolute;   
-    font-size: 200px;
+    font-size: 150px;
 }
 
 .answers{
