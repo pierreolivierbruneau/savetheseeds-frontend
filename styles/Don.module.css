@@ -3,12 +3,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    background-color: rgb(242, 252, 239);
 }
 .title{
     text-align: center;
     color: #224229;
     font-family: 'Libre Baskerville';
-    font-size: 60px;
+    font-size: 40px;
     font-weight: bold;
     margin-top: 40px;
     margin-bottom: 40px;
@@ -25,7 +26,12 @@
     color: #224229;
     cursor: pointer;
     padding-left: 10px;
+    text-decoration: underline;
 
+}
+
+.questions:hover{
+    box-shadow: 5px 5px 4px #b7bab7;
 }
 
 @keyframes slideIn {
@@ -73,4 +79,5 @@
 
 .image{
     margin-bottom: 30px;
+    
 }

@@ -9,8 +9,8 @@
   text-align: center;
   color: #224229;
   font-family: "Libre Baskerville";
-  font-size: 70px;
-  font-weight: bold;
+  font-size: 50px;
+  font-weight: bolder;
   margin-top: 40px;
   margin-bottom: 40px;
 }
@@ -31,6 +31,9 @@
     font-size: 40px;   
     width: 1000px;
     border-radius: 10px;
+}
+.paragraphs:hover {
+  box-shadow: 0 12px 10px 0 #66a673, 0 17px 20px 0 #437c50;
 }
 
 @keyframes slideIn {

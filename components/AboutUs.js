@@ -95,17 +95,17 @@ function AboutUs() {
               <p className={styles.answers}>
                 Save the Seeds est sur le point de rationaliser le processus
                 d'identification, de discussion et de replantation proactive
-                d'arbres à l'aide de graines et de pierres provenant de notre
-                alimentation. Tirant parti d'une technologie de géolocalisation
-                avancée et de forums interactifs, nous servons de centre de
-                communication efficace pour les personnes qui partagent notre
-                profond engagement en faveur de la préservation de notre
-                planète. Grâce à notre plateforme, nous permettons aux
-                utilisateurs de se connecter, d'échanger des informations
-                précieuses et de prendre des mesures concrètes en faveur de la
-                préservation de l'environnement, en favorisant une communauté
-                d'individus partageant les mêmes idées et dédiés au bien-être de
-                notre planète.
+                d'arbres à l'aide de graines provenant de notre alimentation.
+                Tirant parti d'une technologie de géolocalisation avancée et de
+                forums interactifs, nous servons de centre de communication
+                efficace pour les personnes qui partagent notre profond
+                engagement en faveur de la préservation de notre planète. Grâce
+                à notre plateforme, nous permettons aux utilisateurs de se
+                connecter, d'échanger des informations précieuses et de prendre
+                des mesures concrètes en faveur de la préservation de
+                l'environnement, en favorisant une communauté d'individus
+                partageant les mêmes idées et dédiés au bien-être de notre
+                planète.
               </p>
             )}
           </div>

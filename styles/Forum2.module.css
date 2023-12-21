@@ -4,13 +4,15 @@
     margin-top: 24px;
     margin-bottom: 0;
     font-family: baskervville;
-    font-size: 50px;
+    font-size: 70px;
     font-weight: 600;
     display: flex;
     justify-content: center;
     max-width: 1000px;
     
 }
+
+
 
 .container{
     max-width: 1000px;
@@ -24,6 +26,8 @@
 
 .text{
     margin-left: 30px;
+    font-size: xx-large;
+    color: #224229;
 }
 
 .textbox{
@@ -34,13 +38,14 @@
     border-radius: 17px;
     background-color: #E1E8BA;
     border: none;
-    
 }
 
 
 .text2{
     margin-top: 50px;
     margin-left: 30px;
+    font-size: xx-large;
+    color: #224229;
 }
 .textbox2{
   width: 95%;
@@ -60,6 +65,7 @@
     padding: 8px 20px;
     margin-left: 30px;
     margin-top: 10px;;
+    font-size: xx-large;
 }
 
 .commentContainer{

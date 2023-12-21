@@ -86,7 +86,7 @@ function Don() {
       </div>
       <div className={styles.blankspace}></div>
       <div className={styles.image}>
-        <img src="hands.jpg" style={{ width: "300px", height: "200px" }} />
+        <img src="hands.jpg" style={{ width: "400px", height: "300px" }} />
       </div>
     </div>
   );

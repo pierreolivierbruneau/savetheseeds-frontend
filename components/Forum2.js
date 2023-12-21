@@ -10,7 +10,6 @@ function Forum2() {
   const router = useRouter();
   const [comment, setComment] = useState("");
   const [title, setTitle] = useState("");
- 
 
   const onClickHandler = () => {
     if (user.token === null) {
@@ -53,8 +52,8 @@ function Forum2() {
         Forum{" "}
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          height="50"
-          width="50"
+          height="70"
+          width="70"
           viewBox="0 0 512 512"
           className={styles.seedling}
         >

@@ -1,14 +1,13 @@
 .title{
     color: #224229;
-    padding:20px;
+    padding:50px;
     margin-top: 24px;
-    margin-bottom: 0;
     font-family: baskervville;
     font-size: 50px;
     font-weight: 600;
     display: flex;
     justify-content: center;
-    
+   
 }
 
 .image{
@@ -16,7 +15,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-left: 30px;
+    margin-left: 5px;
     gap: 60px;
     color: #224229;
     text-align: center;
@@ -25,28 +24,39 @@
     background-color: #E1E8BA;
     padding-top: 25px;
     padding-bottom: 20px;
+    text-decoration: underline;
 }
 
 
 .pic{
     border-radius: 30px;
-    
+    box-shadow: 5px 5px 4px #b7bab7;
+    margin-bottom: 10px;
 }
 
-.fruits{
-    color: #224229;
-    font-weight: 500;
-    margin-left: 30px;
-    font-size:x-large;
-    margin-bottom: 20px;
-}
+
+
+
+
 
 .fruitContainer{
-    margin: auto;
+   display: flex;
+   justify-content: center;
+    padding-left: 20px;
 }
 
 .fruitContainer2{
-   
     margin-top: 80px;
+    padding-left: 5px;
+    display: flex;
+   justify-content: center;
+  
     
+}
+.fruitContainer3{
+    margin-top: 80px;
+    padding-left: 5px;
+    display: flex;
+   justify-content: center;
+   flex-direction: row-reverse;
 }
