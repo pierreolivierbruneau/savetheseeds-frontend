@@ -16,7 +16,7 @@ function Forum2() {
       //to not allow someone to submit a post ithout a token
       console.log("Utilisateur non connecté");
     } else {
-      fetch("http://localhost:3000/message/newmessage", {
+      fetch("https://savetheseeds-backend-cai6foqtu-itiaxs-projects.vercel.app/message/newmessage", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

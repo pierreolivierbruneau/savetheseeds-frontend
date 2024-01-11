@@ -65,7 +65,7 @@ function Map() {
 
       setPlace((prev) => [...prev, coords]);
 
-      const response = await fetch("http://localhost:3000/pointgps/savepointgps", {
+      const response = await fetch("https://savetheseeds-backend-cai6foqtu-itiaxs-projects.vercel.app/pointgps/savepointgps", {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -94,7 +94,7 @@ function Map() {
 
   useEffect(() => {
     console.log(token);
-    fetch("http://localhost:3000/pointgps/displaypointgps", {
+    fetch("https://savetheseeds-backend-cai6foqtu-itiaxs-projects.vercel.app/pointgps/displaypointgps", {
       method: "POST",
       headers: {
         Accept: "application/json",

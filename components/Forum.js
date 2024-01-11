@@ -10,7 +10,7 @@ function Forum() {
   const [searchMsg, setSearchMsg] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:3000/message/allmessages") //searching all the values stored in the DB
+    fetch("https://savetheseeds-backend-cai6foqtu-itiaxs-projects.vercel.app/message/allmessages") //searching all the values stored in the DB
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
@@ -42,7 +42,7 @@ function Forum() {
 
   //click to search the messages
   function handleSeach() {
-    fetch(`http://localhost:3000/message/filtermessage/${searchMsg}`)
+    fetch(`https://savetheseeds-backend-cai6foqtu-itiaxs-projects.vercel.app/message/filtermessage/${searchMsg}`)
       .then((response) => response.json())
       .then((data) => {
         setMessage(data.message);

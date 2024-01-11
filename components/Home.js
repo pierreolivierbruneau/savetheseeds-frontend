@@ -20,7 +20,7 @@ function Home() {
   }
 
 useEffect(() => {  
-fetch("http://localhost:3000/seeds/allseeds")
+fetch("https://savetheseeds-backend-cai6foqtu-itiaxs-projects.vercel.app/seeds/allseeds")
 .then(response => response.json())
 .then(data => {
   console.log(data);
