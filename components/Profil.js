@@ -1,4 +1,4 @@
-import styles from "../styles/Profil.module.css";
+import styles from "../styles/PROFIL.module.css";
 
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
